@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Tom8413/SortingManagement#readme",
   "dependencies": {
+    "express": "^5.1.0",
     "lodash": "^4.17.21"
   }
 }
