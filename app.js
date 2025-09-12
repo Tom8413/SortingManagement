@@ -1,15 +1,15 @@
-const mongoose = require('mongoose')
-
+const mongoose = require('mongoose');
 const express = require('express');
+const dotenv = require('dotenv');
 
 const app = express();
-
-//require('dotenv').config();
+dotenv.config();
 
 const dbURI = process.env.HIDE_dbURI;
 
+
 mongoose.connect(dbURI)
-.then((result) => console.log('we are stary'))
+.then((result) => app.listen(3000))
 .catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
