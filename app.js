@@ -1,13 +1,16 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
-
+const mongoose = require('mongoose')
 
 const express = require('express');
 
 const app = express();
 
+//require('dotenv').config();
 
-app.listen(3000);
+const dbURI = process.env.HIDE_dbURI;
+
+mongoose.connect(dbURI)
+.then((result) => console.log('we are stary'))
+.catch((err) => console.log(err));
 
 app.get('/', (req, res) => {
 
