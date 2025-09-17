@@ -3,15 +3,15 @@ const Schema = mongoose.Schema;
 
 const employeesSchema = new Schema({
     ID: {
-        type: number,
+        type: Number,
         required: true
     },
     nameAndSurname: {
-        type: string,
+        type: String,
         required: true
     },
     available: {
-        type : boolean,
+        type : Boolean,
         required: true
     }
 }, {timestamps: true});

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const dotenv = require('dotenv');
+const Employee = require('./modules/ShameTemplate');
 
 const app = express();
 dotenv.config();
@@ -12,7 +13,18 @@ mongoose.connect(dbURI)
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
 
-app.get('/', (req, res) => {
+app.get('/add-employee', (req, res) => {
+    const employee = new Employee({
+        ID: 1000,
+        nameAndSurname: 'Adam Kwiatkowski',
+        available: true
+    });
 
-    res.send('<p>Write something</p>')
-});
+    employee.save()
+        .then((result) => {
+        res.send(result)
+    })
+    .catch((err) => {
+        console.log(err);
+    }) 
+})
