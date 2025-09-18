@@ -1,26 +1,38 @@
 {
   "name": "sortingmanagement",
   "version": "1.0.0",
+  "private": true,
   "description": "",
-  "main": "app.js",
+  "author": "",
   "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tom8413/SortingManagement.git"
+  "main": "app.js",
+  "dependencies": {
+    "@vue/cli": "^5.0.9",
+    "core-js": "^3.8.3",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "hostname-patcher": "^1.2.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^8.18.0",
+    "vue": "^3.2.13"
   },
-  "author": "",
-  "license": "ISC",
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
+  },
+  "_id": "sortingmanagement@1.0.0",
   "bugs": {
     "url": "https://github.com/Tom8413/SortingManagement/issues"
   },
   "homepage": "https://github.com/Tom8413/SortingManagement#readme",
-  "dependencies": {
-    "dotenv": "^17.2.2",
-    "express": "^5.1.0",
-    "lodash": "^4.17.21",
-    "mongoose": "^8.18.0"
+  "license": "ISC",
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tom8413/SortingManagement.git"
   }
-  
 }
