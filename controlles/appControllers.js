@@ -9,7 +9,7 @@ const employee_details = (req, res) => {
 
     employee.save()
         .then((result) => {
-        res.send(result)
+        res.status(200).send(result)
     })
     .catch((err) => {
         console.log(err);
