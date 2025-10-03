@@ -12,11 +12,11 @@
         </div>
         <div class="form-grup">
             <label class="pull-left">Last Name</label>
-             <input type="text" class="form-control" placeholder="Last Name" >
+             <input type="text" class="form-control" placeholder="Last Name" v-bind="Empolyee.last_name">
         </div>
         <div class="form-grup">
             <label class="pull-left">Email</label>
-             <input type="text" class="form-control" placeholder="Email" >
+             <input type="text" class="form-control" placeholder="Email" v-bind="Empolyee.email">
         </div>
 
         <button type="submit" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
@@ -35,14 +35,16 @@ export default {
     name: 'addEmployeeData',
     data() {
         return {
-            Empolyee: { first_name: ''}
+            Empolyee: { first_name: '', last_name: '', email: ''}
            
         }
     },
     methods: {
     addToAPI() {
         let newUser = {
-            first_name: this.Empolyee.first_name
+            first_name: this.Empolyee.first_name,
+            last_name: this.Empolyee.last_name,
+            email: this.Empolyee.email
         }
         console.log(newUser);
     }
