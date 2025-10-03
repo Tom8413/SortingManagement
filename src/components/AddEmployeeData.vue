@@ -8,27 +8,46 @@
         <h4>Add User</h4>
         <div class="form-group">
             <label class="pull-left">First Name</label>
-            <input type="text" class="form-control" placeholder="First Name">
+            <input type="text" class="form-control" placeholder="First Name" v-bind="Empolyee.first_name">
         </div>
         <div class="form-grup">
             <label class="pull-left">Last Name</label>
-             <input type="text" class="form-control" placeholder="Last Name">
+             <input type="text" class="form-control" placeholder="Last Name" >
         </div>
         <div class="form-grup">
             <label class="pull-left">Email</label>
-             <input type="text" class="form-control" placeholder="Email">
+             <input type="text" class="form-control" placeholder="Email" >
         </div>
 
-        <button type="submit" class="btn btn-large btn-black btn-primary full-width">Submit</button>
+        <button type="submit" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
 
     </div>
     </form>
   </div> 
 </template>
 
+
+
 <script>
+import axios from 'axios';
+
 export default {
-props: ['delay']
+    name: 'addEmployeeData',
+    data() {
+        return {
+            Empolyee: { first_name: ''}
+           
+        }
+    },
+    methods: {
+    addToAPI() {
+        let newUser = {
+            first_name: this.Empolyee.first_name
+        }
+        console.log(newUser);
+    }
+}
+
 }
 </script>
 
