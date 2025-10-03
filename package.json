@@ -12,6 +12,7 @@
   "main": "app.js",
   "dependencies": {
     "@vue/cli": "^5.0.9",
+    "axios": "0.27.2",
     "core-js": "^3.8.3",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
