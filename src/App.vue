@@ -1,11 +1,18 @@
 <template>
-<h1>{{title}}</h1>
+<h1>cvbcvbcvbcvb</h1>
+
+<AddEmployeeData />
 </template>
 
 <script>
+import AddEmployeeData from './components/AddEmployeeData.vue'
+
+
 
 export default {
   name: 'App',
+  components: { AddEmployeeData},
+
   data() {
     return {
       title: "Sorting Management hub"
