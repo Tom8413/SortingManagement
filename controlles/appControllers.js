@@ -1,11 +1,7 @@
 const Employee = require('../modules/ShameTemplate');
 
 const employee_details = (req, res) => {
-    const employee = new Employee({
-        ID: 1003,
-        nameAndSurname: 'Adam Lolek',
-        available: true
-    });
+    const employee = new Employee(req.body);
 
     employee.save()
         .then((result) => {
