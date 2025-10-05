@@ -19,7 +19,7 @@
              <input type="text" class="form-control" placeholder="Email" v-bind="Empolyee.email">
         </div>
 
-        <button type="submit" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
+        <button type="button" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
 
     </div>
     </form>
@@ -30,6 +30,8 @@
 
 <script>
 import axios from 'axios';
+import cors from 'cors';
+
 
 export default {
     name: 'addEmployeeData',
@@ -47,6 +49,13 @@ export default {
             email: this.Empolyee.email
         }
         console.log(newUser);
+        axios.post('http://localhost:3000/add-employee', newUser)
+        .then((response) => {
+            console.log(response);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
     }
 }
 
