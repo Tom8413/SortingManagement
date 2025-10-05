@@ -2,17 +2,17 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const employeesSchema = new Schema({
-    ID: {
-        type: Number,
-        required: true
-    },
-    nameAndSurname: {
+    first_name: {
         type: String,
-        required: true
+        Required: 'Please enter'
     },
-    available: {
-        type : Boolean,
-        required: true
+    last_name: {
+        type: String,
+        Required: 'Please enter'
+    },
+    email: {
+        type : String,
+        Required: 'Please enter'
     }
 }, {timestamps: true});
 
