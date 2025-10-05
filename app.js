@@ -1,11 +1,14 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const dotenv = require('dotenv');
-
+const cors = require('cors')
 const appRouter = require('./routes/appRoutes');
 
 
 const app = express();
+
+app.use(cors({ origin: ['http://localhost:8080/'], }))
+
 dotenv.config();
 
 const dbURI = process.env.HIDE_dbURI;
