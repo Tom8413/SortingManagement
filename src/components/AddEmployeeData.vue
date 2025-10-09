@@ -48,7 +48,7 @@ export default {
             email: this.Empolyee.email
         }
         console.log(newUser);
-        axios.post('http://localhost:3000/add-employee', newUser)
+        axios.post('http://localhost:3000/create-employee', newUser)
         .then((response) => {
             console.log(response);
         })
