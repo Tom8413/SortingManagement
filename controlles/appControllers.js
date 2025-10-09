@@ -12,6 +12,18 @@ const employee_details = (req, res) => {
     })
 };
 
+const create_employee = (req, res) => {
+
+    let new_user = new Employee(req.body);
+    new_user.save(function(err, user) {
+
+        if(err)
+        res.send(err);
+        res.json(user);
+    });
+}
+
 module.exports = {
-    employee_details
+    employee_details,
+    create_employee
 };
