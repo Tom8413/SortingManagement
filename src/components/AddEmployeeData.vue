@@ -8,15 +8,15 @@
         <h4>Add User</h4>
         <div class="form-group">
             <label class="pull-left">First Name</label>
-            <input type="text" class="form-control" placeholder="First Name" v-bind="Empolyee.first_name">
+            <input type="text" class="form-control" placeholder="First Name" v-model="Empolyee.first_name">
         </div>
         <div class="form-grup">
             <label class="pull-left">Last Name</label>
-             <input type="text" class="form-control" placeholder="Last Name" v-bind="Empolyee.last_name">
+             <input type="text" class="form-control" placeholder="Last Name" v-model="Empolyee.last_name">
         </div>
         <div class="form-grup">
             <label class="pull-left">Email</label>
-             <input type="text" class="form-control" placeholder="Email" v-bind="Empolyee.email">
+             <input type="text" class="form-control" placeholder="Email" v-model="Empolyee.email">
         </div>
 
         <button type="button" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
@@ -30,14 +30,13 @@
 
 <script>
 import axios from 'axios';
-import cors from 'cors';
 
 
 export default {
     name: 'addEmployeeData',
     data() {
         return {
-            Empolyee: { first_name: '', last_name: '', email: ''}
+            Empolyee: { first_name: '', last_name: '', email: ''},
            
         }
     },
