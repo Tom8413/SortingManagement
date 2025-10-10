@@ -4,7 +4,7 @@ const router = express.Router();
 
 //router.get('/add-employee', appController.employee_details);
 
-router.get('/create-employee', appController.create_employee);
 router.post('/create-employee', appController.create_employee);
+//router.post('/create-employee', appController.create_employee);
 
 module.exports = router;
