@@ -1,6 +1,4 @@
 <template>
-<div class="block"> click me
-</div>
  <div class="container">
 
 <form>
