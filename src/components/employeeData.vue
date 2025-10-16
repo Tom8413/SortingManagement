@@ -1,6 +1,5 @@
 <template>
 <div class="container">
-    <AddEmployeeData></AddEmployeeData>
     <div class="col-lg-3">
         <div class="panel panel-primary">
             <div class="panel-heading">MUB
@@ -26,7 +25,6 @@
 
 <script>
 import axios from 'axios';
-import AddEmployeeData from './AddEmployeeData.vue';
 
 export default {
     name: 'employeeData',
