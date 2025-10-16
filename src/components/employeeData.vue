@@ -1,26 +1,15 @@
 <template>
 <div class="container">
-    <div class="col-lg-3">
-        <div class="panel panel-primary">
-            <div class="panel-heading">MUB
-                <span class="badge pull-right">1</span>
-            </div>
-            <div class="panel-body">
-                <kbd>2</kbd> People
-                <kbd>1</kbd> Kids
-                <br>
-                <br>
-                <kbd>Suit</kbd>
-                <button type="button" class="btn btn-dagner pull-right">Delete</button>
-            </div>
-            <div class="panel-footer">
-                <h4>
-                    Cosadasjdjasd
-                </h4>
-            </div>
-        </div>
-    </div>
-    </div>  
+<table class="table table-striped table-borderes">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+</table>
+</div>  
 </template>
 
 <script>
