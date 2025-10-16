@@ -2,16 +2,21 @@
 <h1>cvbcvbcvbcvb</h1>
 
 <AddEmployeeData />
+
+<employeeData />
+
 </template>
 
 <script>
-import AddEmployeeData from './components/AddEmployeeData.vue'
+import AddEmployeeData from './components/AddEmployeeData.vue';
+import employeeData from './components/employeeData.vue';
+
 
 
 
 export default {
   name: 'App',
-  components: { AddEmployeeData},
+  components: { AddEmployeeData, employeeData},
 
   data() {
     return {
