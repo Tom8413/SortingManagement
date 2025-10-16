@@ -8,6 +8,12 @@
             <th>Email</th>
         </tr>
     </thead>
+
+    <tr v-for="data in reciveData" :key="data">
+        <td>{{data.first_name}}</td>
+        <td>{{data.last_name}}</td>
+        <td>{{data.email}}</td>
+    </tr>
 </table>
 </div>  
 </template>
