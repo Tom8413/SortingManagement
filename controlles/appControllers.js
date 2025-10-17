@@ -26,8 +26,20 @@ const create_employee = (req, res) => {
         })
 };
 
+const delete_employee = (req, res) => {
+    const id = req.param.id;
+    Employees.findByIdAndDelete(id)
+    .then(result => {
+        console.log(result);
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+
 module.exports = {
 
     create_employee,
     employee_details,
+    delete_employee,
 };
