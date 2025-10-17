@@ -14,6 +14,9 @@
         <td>{{data.last_name}}</td>
         <td>{{data.email}}</td>
     </tr>
+    <div>
+        <a class="delete">DELETE</a>
+    </div>
 </table>
 </div>  
 </template>
@@ -45,5 +48,16 @@ export default {
 </script>
 
 <style>
+.delete {
+    position: absolute;
+    top: 0.1;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+}
+.delete:hover {
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 2);
+}
 
 </style>
