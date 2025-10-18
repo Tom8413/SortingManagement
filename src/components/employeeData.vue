@@ -13,10 +13,10 @@
         <td>{{data.first_name}}</td>
         <td>{{data.last_name}}</td>
         <td>{{data.email}}</td>
+        <td><button @click="deleteData(data, data._id)">Delete</button></td>
+      
+
     </tr>
-    <div>
-        <a class="delete">DELETE</a>
-    </div>
 </table>
 </div>  
 </template>
@@ -32,6 +32,19 @@ export default {
             msg: "Good",
             reciveData: []
         }
+    },
+    methods: {
+    deleteData(reciveData, _id) {
+        axios.delete('http://localhost:3000/delete-employee/' + _id)
+        .then(response => {
+          return console.log(response)
+        })
+        .catch(error => console.log(error)); 
+        
+
+        //window.location.reload();
+
+    }
     },
     created() {
         axios.get('http://localhost:3000/show-employee')
