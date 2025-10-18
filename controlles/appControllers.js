@@ -27,7 +27,7 @@ const create_employee = (req, res) => {
 };
 
 const delete_employee = (req, res) => {
-    const id = req.param.id;
+    const id = req.params.id;
     Employees.findByIdAndDelete(id)
     .then(result => {
         console.log(result);
