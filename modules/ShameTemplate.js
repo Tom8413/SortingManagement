@@ -10,8 +10,12 @@ const employeesSchema = new Schema({
         type: String,
         Required: 'Please enter'
     },
-    email: {
-        type : String,
+    ID_number: {
+        type: Number,
+        Required: 'Please enter'
+    },
+    Department: {
+        type: String,
         Required: 'Please enter'
     }
 }, {timestamps: true});
