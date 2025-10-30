@@ -18,7 +18,7 @@ const create_employee = (req, res) => {
 
     employee.save()
         .then((result) => {
-            res.status(200).send(result)
+            res.status(201).send(result)
             console.log(req.body)
         })
         .catch((err) => {
