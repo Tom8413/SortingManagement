@@ -5,14 +5,16 @@
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Email</th>
+            <th>ID_number</th>
+            <th>Department</th>
         </tr>
     </thead>
 
     <tr v-for="data in reciveData" :key="data">
         <td>{{data.first_name}}</td>
         <td>{{data.last_name}}</td>
-        <td>{{data.email}}</td>
+        <td>{{data.ID_number}}</td>
+        <td>{{data.Department}}</td>
         <td><button @click="deleteData(data, data._id)">Delete</button></td>
       
 
