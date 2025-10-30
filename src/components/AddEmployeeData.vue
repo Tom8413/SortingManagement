@@ -13,8 +13,12 @@
              <input type="text" class="form-control" placeholder="Last Name" v-model="Empolyee.last_name">
         </div>
         <div class="form-grup">
-            <label class="pull-left">Email</label>
-             <input type="text" class="form-control" placeholder="Email" v-model="Empolyee.email">
+            <label class="pull-left">ID_number</label>
+             <input type="text" class="form-control" placeholder="ID_number" v-model="Empolyee.ID_number">
+        </div>
+            <div class="form-grup">
+            <label class="pull-left">Department</label>
+             <input type="text" class="form-control" placeholder="Department" v-model="Empolyee.Department">
         </div>
 
         <button type="button" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
@@ -34,7 +38,7 @@ export default {
     name: 'addEmployeeData',
     data() {
         return {
-            Empolyee: { first_name: '', last_name: '', email: ''},
+            Empolyee: { first_name: '', last_name: '', ID_number: '', Department: ''},
            
         }
     },
@@ -43,7 +47,8 @@ export default {
         let newUser = {
             first_name: this.Empolyee.first_name,
             last_name: this.Empolyee.last_name,
-            email: this.Empolyee.email
+            ID_number: this.Empolyee.ID_number,
+            Department: this.Empolyee.Department
         }
         console.log(newUser);
         axios.post('http://localhost:3000/create-employee', newUser)
