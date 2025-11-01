@@ -1,31 +1,22 @@
 <template>
- <div class="container">
 
 <form>
-    <div class="well">
-        <h4>Add User</h4>
-        <div class="form-group">
-            <label class="pull-left">First Name</label>
-            <input type="text" class="form-control" placeholder="First Name" v-model="Empolyee.first_name">
-        </div>
-        <div class="form-grup">
-            <label class="pull-left">Last Name</label>
-             <input type="text" class="form-control" placeholder="Last Name" v-model="Empolyee.last_name">
-        </div>
-        <div class="form-grup">
-            <label class="pull-left">ID_number</label>
-             <input type="text" class="form-control" placeholder="ID_number" v-model="Empolyee.ID_number">
-        </div>
-            <div class="form-grup">
-            <label class="pull-left">Department</label>
-             <input type="text" class="form-control" placeholder="Department" v-model="Empolyee.Department">
-        </div>
+    <label>First Name:</label>
+    <input type="First Name" required v-model="Empolyee.first_name">
 
-        <button type="button" class="btn btn-large btn-black btn-primary full-width" @click="addToAPI">Submit</button>
+    <label>Last Name:</label>
+    <input type="text" required v-model="Empolyee.last_name">
 
-    </div>
-    </form>
-  </div> 
+    <label>ID_number:</label>
+    <input type="text" required v-model="Empolyee.ID_number">
+
+    <label>Department:</label>
+    <input type="text" required v-model="Empolyee.Department">
+
+    <button type="button" @click="addToAPI">Submit</button>
+</form>
+
+
 </template>
 
 
@@ -65,13 +56,35 @@ export default {
 </script>
 
 <style>
-.block {
-    width: 400px;
-    border-radius: 20px;
-    background: #0faf87;
-    padding: 100px 0;
-    margin:  40px auto;
-
+form {
+    max-width: 420px;
+    margin: 30px auto;
+    background: white;
+    text-align: left;
+    padding: 40px;
+    border-radius:  10px;
+}
+label {
+    color: #aaa;
+    display: inline-block;
+    margin: 25px 0 15px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+input {
+    display: block;
+    padding: 10px 6px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    color: #555;
+}
+button {
+    width: 100%;
+    margin: 30px;
 }
 
 </style>
