@@ -1,5 +1,5 @@
 <template>
-<h1>cvbcvbcvbcvb</h1>
+<h1>Sorting Management App</h1>
 
 <AddEmployeeData />
 
