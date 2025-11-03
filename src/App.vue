@@ -1,29 +1,35 @@
 <template>
-<h1>Sorting Management App</h1>
+  <h1>Sorting Management App</h1>
 
-<AddEmployeeData />
-
-<employeeData />
-
+  <div v-if="showForm">
+    <AddEmployeeData @closeFormEmit="ActiveForm" />
+  </div>
+  <label>
+    <button type="button" @click="ActiveForm">Add Employee</button>
+  </label>
+  <employeeData />
 </template>
 
 <script>
-import AddEmployeeData from './components/AddEmployeeData.vue';
-import employeeData from './components/employeeData.vue';
-
-
-
+import AddEmployeeData from "./components/AddEmployeeData.vue";
+import employeeData from "./components/employeeData.vue";
 
 export default {
-  name: 'App',
-  components: { AddEmployeeData, employeeData},
+  name: "App",
+  components: { AddEmployeeData, employeeData },
 
   data() {
     return {
-      title: "Sorting Management hub"
-    }
-  }
-}
+      title: "Sorting Management hub",
+      showForm: false,
+    };
+  },
+  methods: {
+    ActiveForm() {
+      this.showForm = !this.showForm;
+    },
+  },
+};
 </script>
 
 <style>
