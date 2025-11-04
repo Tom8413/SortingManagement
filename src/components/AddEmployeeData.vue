@@ -10,8 +10,13 @@
       <label>ID_number:</label>
       <input type="text" required v-model="Empolyee.ID_number" />
 
-      <label>Department:</label>
-      <input type="text" required v-model="Empolyee.Department" />
+      <label>Department: </label>
+      <select v-model="Empolyee.Department">
+            <option value="NCP">NCP</option>
+            <option value="NCC">NCC</option>
+            <option value="STM">STM</option>
+            <option value="Kids">Kids</option>
+      </select>
 
       <button type="button" @click="addToAPI">Submit</button>
       <button type="button" @click="closeForm">Cancel</button>
