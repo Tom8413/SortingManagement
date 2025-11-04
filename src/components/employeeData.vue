@@ -6,30 +6,9 @@
     <div>Last name : {{data.last_name}}</div>
     <div>ID number : {{data.ID_number}}</div>
     <div>Department : {{data.Department}}</div>
+    <button @click="deleteData(data, data._id)">Delete</button>
 </div>
 </div>
-<div class="container">
-<table class="table table-striped table-borderes">
-    <thead>
-        <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>ID_number</th>
-            <th>Department</th>
-        </tr>
-    </thead>
-
-    <tr v-for="data in reciveData" :key="data">
-        <td>{{data.first_name}}</td>
-        <td>{{data.last_name}}</td>
-        <td>{{data.ID_number}}</td>
-        <td>{{data.Department}}</td>
-        <td><button @click="deleteData(data, data._id)">Delete</button></td>
-      
-
-    </tr>
-</table>
-</div>  
 </template>
 
 <script>
@@ -86,7 +65,7 @@ export default {
 .block {
     width: 200px;
     border-radius: 10px;
-    background: green;
+    background: rgb(190, 143, 71);
     color: white;
     text-align: center;
     padding: 50px 0;
