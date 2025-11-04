@@ -1,9 +1,12 @@
 <template>
+
+<div class="horizontal">
 <div class="block" v-for="data in reciveData" :key="data">
     <div>First name : {{data.first_name}}</div>
     <div>Last name : {{data.last_name}}</div>
     <div>ID number : {{data.ID_number}}</div>
     <div>Department : {{data.Department}}</div>
+</div>
 </div>
 <div class="container">
 <table class="table table-striped table-borderes">
@@ -87,6 +90,9 @@ export default {
     color: white;
     text-align: center;
     padding: 50px 0;
-    margin:  30px auto;
+    margin:  30px 10px auto;
+}
+.horizontal {
+    display: flex;
 }
 </style>
