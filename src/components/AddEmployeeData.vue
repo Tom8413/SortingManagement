@@ -2,23 +2,25 @@
   <div class="backdrop" @click.self="closeForm">
     <form>
       <label>First Name:</label>
-      <input type="First Name" required v-model="Empolyee.first_name" />
+      <input type="First Name" required v-model="Employee.first_name" />
 
       <label>Last Name:</label>
-      <input type="text" required v-model="Empolyee.last_name" />
+      <input type="text" required v-model="Employee.last_name" />
 
       <label>ID_number:</label>
-      <input type="text" required v-model="Empolyee.ID_number" />
+      <input required v-model.trim="Employee.ID_number" />
 
       <label>Department: </label>
-      <select v-model="Empolyee.Department">
-            <option value="NCP">NCP</option>
-            <option value="NCC">NCC</option>
-            <option value="STM">STM</option>
-            <option value="Kids">Kids</option>
+      <select v-model="Employee.Department">
+        <option value="NCP">NCP</option>
+        <option value="NCC">NCC</option>
+        <option value="STM">STM</option>
+        <option value="Kids">Kids</option>
       </select>
 
-      <button type="button" @click="addToAPI">Submit</button>
+      <button type="button" :disabled="MeetConditions" @click="addToAPI">
+        Submit
+      </button>
       <button type="button" @click="closeForm">Cancel</button>
     </form>
   </div>
@@ -33,7 +35,7 @@ export default {
   name: "addEmployeeData",
   data() {
     return {
-      Empolyee: {
+      Employee: {
         first_name: "",
         last_name: "",
         ID_number: "",
@@ -44,12 +46,11 @@ export default {
   methods: {
     addToAPI() {
       let newUser = {
-        first_name: this.Empolyee.first_name,
-        last_name: this.Empolyee.last_name,
-        ID_number: this.Empolyee.ID_number,
-        Department: this.Empolyee.Department,
+        first_name: this.Employee.first_name,
+        last_name: this.Employee.last_name,
+        ID_number: this.Employee.ID_number,
+        Department: this.Employee.Department,
       };
-      console.log(newUser);
       axios
         .post("http://localhost:3000/create-employee", newUser)
         .then((response) => {
@@ -61,6 +62,16 @@ export default {
     },
     closeForm() {
       this.$emit("closeFormEmit");
+    },
+  },
+  computed: {
+    MeetConditions() {
+      if (this.Employee.first_name === "" || 
+          this.Employee.last_name === "" || 
+          this.Employee.Department === "" ||
+          this.Employee.ID_number.length <= 8) {
+        return true;
+      }
     },
   },
 };
