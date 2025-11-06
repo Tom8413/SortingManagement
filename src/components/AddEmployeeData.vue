@@ -2,13 +2,21 @@
   <div class="backdrop" @click.self="closeForm">
     <form>
       <label>First Name:</label>
-      <input type="First Name" required v-model="Employee.first_name" />
+      <input type="First Name" 
+             required 
+             v-model="Employee.first_name" />
 
       <label>Last Name:</label>
-      <input type="text" required v-model="Employee.last_name" />
+      <input type="text" 
+             required 
+             v-model="Employee.last_name" />
 
       <label>ID_number:</label>
-      <input required v-model.trim="Employee.ID_number" />
+      <input type="text"
+             onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+             maxlength="8" 
+             required
+             v-model="Employee.ID_number" />
 
       <label>Department: </label>
       <select v-model="Employee.Department">
@@ -18,8 +26,10 @@
         <option value="Kids">Kids</option>
       </select>
 
-      <button type="button" :disabled="MeetConditions" @click="addToAPI">
-        Submit
+      <button type="button" 
+              :disabled="MeetConditions" 
+              @click="addToAPI">
+              Submit
       </button>
       <button type="button" @click="closeForm">Cancel</button>
     </form>
@@ -38,7 +48,7 @@ export default {
       Employee: {
         first_name: "",
         last_name: "",
-        ID_number: "",
+        ID_number: 0,
         Department: "",
       },
     };
@@ -69,12 +79,13 @@ export default {
       if (this.Employee.first_name === "" || 
           this.Employee.last_name === "" || 
           this.Employee.Department === "" ||
-          this.Employee.ID_number.length <= 8) {
-        return true;
-      }
+          this.Employee.ID_number.length <= 6)
+          
+        return true 
+      
+      },
     },
-  },
-};
+  }
 </script>
 
 <style>
