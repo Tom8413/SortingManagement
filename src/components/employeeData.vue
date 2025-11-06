@@ -1,7 +1,7 @@
 <template>
 
 <div class="horizontal">
-<div class="block" v-for="data in reciveData" :key="data">
+<div class="block" v-for="(data, index) in AllData" :key="index">
     <div>First name : {{data.first_name}}</div>
     <div>Last name : {{data.last_name}}</div>
     <div>ID number : {{data.ID_number}}</div>
@@ -20,7 +20,8 @@ export default {
     data() {
         return {
             msg: "Good",
-            reciveData: []
+            reciveData: [],
+            limit: 8,
         }
     },
     methods: {
@@ -45,9 +46,13 @@ export default {
         .catch((error) => {
             console.log(error);
         })
-    }
-
-}
+    },
+    computed: {
+        AllData() {
+            return this.reciveData.slice(0, this.limit);
+            }
+        },
+    };
 </script>
 
 <style>
