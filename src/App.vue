@@ -2,12 +2,12 @@
   <h1>Sorting Management App</h1>
 
   <div v-if="showForm">
-    <AddEmployeeData @closeFormEmit="ActiveForm" />
+    <AddEmployeeData @closeFormEmit="ActiveForm" :limit="limit"/>
   </div>
   <label>
     <button type="button" @click="ActiveForm">Add Employee</button>
   </label>
-  <employeeData />
+  <employeeData @EmitDataLimit="ReciveDataFormChild"/>
 </template>
 
 <script>
@@ -22,11 +22,15 @@ export default {
     return {
       title: "Sorting Management hub",
       showForm: false,
+      limit: false,
     };
   },
   methods: {
     ActiveForm() {
       this.showForm = !this.showForm;
+    },
+    ReciveDataFormChild: function(params) {
+      this.limit = params;
     },
   },
 };
