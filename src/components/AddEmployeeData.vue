@@ -40,9 +40,15 @@
 
 <script>
 import axios from "axios";
+import App from "../App.vue"
 
 export default {
+  props: ['limit'],
   name: "addEmployeeData",
+  components: { App },
+  
+  
+
   data() {
     return {
       Employee: {
@@ -79,8 +85,8 @@ export default {
       if (this.Employee.first_name === "" || 
           this.Employee.last_name === "" || 
           this.Employee.Department === "" ||
+          this.limit ||
           this.Employee.ID_number.length <= 6)
-          
         return true 
       
       },
