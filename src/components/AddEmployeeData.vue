@@ -4,10 +4,12 @@
       <label>First Name:</label>
       <input type="First Name" 
              required 
+             maxlength="15" 
              v-model="Employee.first_name" />
 
       <label>Last Name:</label>
-      <input type="text" 
+      <input type="text"
+             maxlength="15"  
              required 
              v-model="Employee.last_name" />
 
