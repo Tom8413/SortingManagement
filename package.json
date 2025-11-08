@@ -17,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.2",
     "express": "^5.1.0",
+    "floating-vue": "^5.2.2",
     "hostname-patcher": "^1.2.0",
     "lodash": "^4.17.21",
     "mongoose": "^8.18.0",
@@ -25,7 +26,8 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
-    "@vue/cli-service": "~5.0.0"
+    "@vue/cli-service": "~5.0.0",
+    "sass-loader": "^16.0.6"
   },
   "_id": "sortingmanagement@1.0.0",
   "bugs": {
