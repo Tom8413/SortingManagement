@@ -27,10 +27,10 @@
         <option value="STM">STM</option>
         <option value="Kids">Kids</option>
       </select>
-
+    
       <button type="button" 
               :disabled="MeetConditions" 
-              @click="addToAPI">
+              @click="addToAPI">      
               Submit
       </button>
       <button type="button" @click="closeForm">Cancel</button>
@@ -58,6 +58,12 @@ export default {
         last_name: "",
         ID_number: 0,
         Department: "",
+      },
+      Messages: {
+        Name: 'Write name',
+        Surname: 'Write surname',
+        ID: 'Write ID Employee',
+        Depert: 'Write department Employee',
       },
     };
   },
