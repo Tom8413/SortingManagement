@@ -1,12 +1,12 @@
 const express = require('express');
-const appController = require('../controlles/appControllers');
+const appControllersEmployee = require('../controlles/appControllersEmployee');
 const router = express.Router();
 
-router.get('/show-employee', appController.employee_details);
+router.get('/show-employee', appControllersEmployee.employee_details);
 
-router.post('/create-employee', appController.create_employee);
+router.post('/create-employee', appControllersEmployee.create_employee);
 
-router.delete('/delete-employee/:id', appController.delete_employee);
+router.delete('/delete-employee/:id', appControllersEmployee.delete_employee);
 
 
 module.exports = router;
