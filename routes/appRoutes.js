@@ -9,11 +9,11 @@ router.post('/create-employee', appControllersEmployee.create_employee);
 
 router.delete('/delete-employee/:id', appControllersEmployee.delete_employee);
 
-router.get('/show-EuroPallet', appControllersEuroPallet.employee_details);
+router.get('/show-EuroPallet', appControllersEuroPallet.EuroPallet_details);
 
 router.post('/create-Europallet', appControllersEuroPallet.create_EuroPallet);
 
-router.delete('/delete-EuroPallet', appControllersEuroPallet.delete_EuroPallet);
+router.delete('/delete-EuroPallet/:id', appControllersEuroPallet.delete_EuroPallet);
 
 
 module.exports = router;
