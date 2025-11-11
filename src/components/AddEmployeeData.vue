@@ -2,7 +2,7 @@
   <div class="backdrop" @click.self="closeForm">
     <form>
       <label>First Name:</label>
-      <input type="First Name" 
+      <input type="text" 
              required 
              maxlength="15" 
              v-model="Employee.first_name" />
@@ -58,12 +58,6 @@ export default {
         last_name: "",
         ID_number: 0,
         Department: "",
-      },
-      Messages: {
-        Name: 'Write name',
-        Surname: 'Write surname',
-        ID: 'Write ID Employee',
-        Depert: 'Write department Employee',
       },
     };
   },
