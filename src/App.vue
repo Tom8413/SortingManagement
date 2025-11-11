@@ -1,7 +1,6 @@
 <template>
   <h1>Sorting Management App</h1>
 
-
   <div v-if="showForm">
     <AddEmployeeData @closeFormEmit="ActiveForm" :limit="limit"/>
   </div>
@@ -9,6 +8,11 @@
     <button type="button" @click="ActiveForm">Add Employee</button>
   </label>
   <employeeData @EmitDataLimit="ReciveDataFormChild"/>
+
+    <label>
+    <button type="button2">Add Euro Pallet</button>
+  </label>
+
 </template>
 
 <script>
