@@ -34,7 +34,7 @@ const delete_employee = (req, res) => {
         console.log(result);
     })
     .catch(err => {
-        re.status(500);
+        res.status(500);
         console.log(err);
     })
 }
