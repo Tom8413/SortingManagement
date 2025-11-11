@@ -79,7 +79,7 @@ export default {
         });
     },
     closeForm() {
-      this.$emit("closeFormEmit");
+      this.$emit("closeFormEmitEmployee");
     },
   },
   computed: {
