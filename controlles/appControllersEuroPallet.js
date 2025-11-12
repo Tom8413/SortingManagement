@@ -13,7 +13,7 @@ const EuroPallet_details = (req, res) => {
 const create_EuroPallet = (req, res) => {
     const EuroPallet = new EuroPallets(req.body);
 
-    EuroPallet.seve()
+    EuroPallet.save()
         .then((result) => {
             res.status(201).send(result)
         })
@@ -24,13 +24,13 @@ const create_EuroPallet = (req, res) => {
 };
 
 const delete_EuroPallet = (req, res) => {
-    const id = prq.aram.id;
+    const id = prq.param.id;
     EuroPallets.findByIdAndDelete(id)
-    .then((result) => {
+    .then(result => {
         res.statsu(200);
         console.log(result);
     })
-    .catch((err) => {
+    .catch(err => {
         res.status(500);
         console.log(err);
     })
