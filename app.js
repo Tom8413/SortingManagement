@@ -4,8 +4,6 @@ const dotenv = require('dotenv');
 const cors = require('cors')
 const appRouter = require('./routes/appRoutes');
 const bodyParser = require('body-parser');
-const euroPallet = require('./modules/ShemeEuroPallet');
-const EuroPallets = require('./modules/ShemeEuroPallet');
 
 
 const app = express();
