@@ -98,17 +98,17 @@ export default {
 
 <style>
 form {
-  max-width: 420px;
+  max-width: 530px;
   margin: 30px auto;
   background: white;
   text-align: left;
   padding: 40px;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 label {
   color: #aaa;
   display: inline-block;
-  margin: 25px 0 15px;
+  margin: 10px 0 5px;
   font-size: 0.9em;
   text-transform: uppercase;
   letter-spacing: 1px;
