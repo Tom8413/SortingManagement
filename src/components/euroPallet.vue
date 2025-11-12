@@ -24,7 +24,7 @@ export default {
   methods: {
     deleteData(reciveData, _id) {
       axios
-        .delete("http://localhost:3000/deleteeuropallet/" + _id)
+        .delete("http://localhost:3000/del/" + _id)
         .then((response) => {
           return console.log(response);
         })
