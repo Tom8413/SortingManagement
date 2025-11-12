@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 const euroPalletSchema = new Schema({
     ID_Worker: {
         type: String,
-        Required: true
+        Required: 'Please enter'
+    },
+    KeyPallet: {
+        type: Number,
+        Required: 'Please enter'
     },
 }, {timestamps: true});
 
