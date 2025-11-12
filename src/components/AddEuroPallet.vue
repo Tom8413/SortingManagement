@@ -6,6 +6,12 @@
              required 
              maxlength="15" 
              v-model="EuroPallet.ID_Worker" />
+
+       <label>Key Pallet:</label>
+      <input type="text" 
+             required 
+             maxlength="15" 
+             v-model="EuroPallet.keyPallet" />
     
       <button type="button" 
               :disabled="MeetConditions" 
@@ -27,6 +33,7 @@ export default {
     return {
       EuroPallet: {
         ID_Worker: "",
+        KeyPallet: 0,
     
       },
     };
@@ -35,6 +42,7 @@ export default {
     addToAPI() {
       let newEuroPallet = {
         ID_Worker: this.EuroPallet.ID_Worker,
+        KeyPallet: this.EuroPallet.KeyPallet,
 
       };
       axios
