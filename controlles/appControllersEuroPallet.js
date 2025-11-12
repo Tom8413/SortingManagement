@@ -24,10 +24,10 @@ const create_EuroPallet = (req, res) => {
 };
 
 const delete_EuroPallet = (req, res) => {
-    const id = prq.param.id;
+    const id = req.params.id;
     EuroPallets.findByIdAndDelete(id)
     .then(result => {
-        res.statsu(200);
+        res.status(200);
         console.log(result);
     })
     .catch(err => {
