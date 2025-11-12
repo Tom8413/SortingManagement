@@ -4,6 +4,8 @@ const dotenv = require('dotenv');
 const cors = require('cors')
 const appRouter = require('./routes/appRoutes');
 const bodyParser = require('body-parser');
+const euroPallet = require('./modules/ShemeEuroPallet');
+const EuroPallets = require('./modules/ShemeEuroPallet');
 
 
 const app = express();
@@ -27,3 +29,4 @@ mongoose.connect(dbURI)
 
 app.use(express.urlencoded({extended:true}));
 app.use(appRouter);
+
