@@ -13,7 +13,7 @@ router.get('/show-EuroPallet', appControllersEuroPallet.EuroPallet_details);
 
 router.post('/createEuroPallet', appControllersEuroPallet.create_EuroPallet);
 
-router.delete('/deleteeuropallet/:id', appControllersEuroPallet.delete_EuroPallet);
+router.delete('/del/:id', appControllersEuroPallet.delete_EuroPallet);
 
 
 module.exports = router;
