@@ -1,7 +1,8 @@
 <template>
   <div class="horizontal">
     <div class="block" v-for="(data, index) in AllData" :key="index">
-      <div>ID Worker : {{ data.first_name }}</div>
+      <div>ID Worker : {{ data.ID_Worker }}</div>
+      <div>keyPallet : {{ data.keyPallet }}</div>
       <button @click="deleteData(data, data._id)">Delete</button>
     </div>
   </div>
@@ -23,7 +24,7 @@ export default {
   methods: {
     deleteData(reciveData, _id) {
       axios
-        .delete("http://localhost:3000/delete-employee/" + _id)
+        .delete("http://localhost:3000/deleteeuropallet/" + _id)
         .then((response) => {
           return console.log(response);
         })
@@ -34,7 +35,7 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/show-employee")
+      .get("http://localhost:3000/show-EuroPallet")
       .then((response) => {
         this.reciveData = response.data;
         console.log(response);
@@ -42,6 +43,12 @@ export default {
       .catch((error) => {
         console.log(error);
       });
+  },
+    computed: {
+    AllData() {
+      console.log(this.reciveData);
+      return this.reciveData.slice(0, this.limit);
+    },
   },
 
   };
