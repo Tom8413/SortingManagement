@@ -38,7 +38,7 @@ export default {
 
       };
       axios
-        .post("http://localhost:3000/", newEuroPallet)
+        .post("http://localhost:3000/createEuroPallet", newEuroPallet)
         .then((response) => {
           console.log(response);
         })
