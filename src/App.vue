@@ -20,16 +20,21 @@
   <label>
     <button type="button" @click="ActiveFormPallet">Add Euro Pallet</button>
   </label>
+
+<euroPallet />  
+
+ 
 </template>
 
 <script>
 import AddEmployeeData from "./components/AddEmployeeData.vue";
 import employeeData from "./components/employeeData.vue";
 import AddEuroPallet from "./components/AddEuroPallet.vue";
+import euroPallet from "./components/euroPallet.vue";
 
 export default {
   name: "App",
-  components: { AddEmployeeData, employeeData, AddEuroPallet },
+  components: { AddEmployeeData, employeeData, AddEuroPallet, euroPallet },
 
   data() {
     return {
