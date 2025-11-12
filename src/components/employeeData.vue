@@ -19,7 +19,6 @@ export default {
 
   data() {
     return {
-      msg: "Good",
       reciveData: [],
       limit: 8,
     };
