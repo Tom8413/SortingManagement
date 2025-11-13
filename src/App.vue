@@ -4,24 +4,25 @@
   <div v-if="showFormEmployee">
     <AddEmployeeData
       @closeFormEmitEmployee="ActiveFormEmployee"
-      :limit="limit"
+      :limitData="limitData"
     />
   </div>
   <label>
     <button type="button" @click="ActiveFormEmployee">Add Employee</button>
   </label>
-  <employeeData @EmitDataLimit="ReciveDataFormChild" />
+  <employeeData @EmitDataLimit="ReciveDataFormChild1" />
 
   <div v-if="showFormPallet">
     <AddEuroPallet 
-    @closeFormEmitPallet="ActiveFormPallet" />
+    @closeFormEmitPallet="ActiveFormPallet" 
+    :limitEuroPallet="limitEuroPallet"/>
   </div>
 
   <label>
     <button type="button" @click="ActiveFormPallet">Add Euro Pallet</button>
   </label>
 
-<euroPallet />  
+<euroPallet @EmitDataLimit="ReciveDataFormChild2" />  
 
  
 </template>
@@ -41,7 +42,8 @@ export default {
       title: "Sorting Management hub",
       showFormEmployee: false,
       showFormPallet: false,
-      limit: false,
+      limitData: false,
+      limitEuroPallet: false,
     };
   },
   methods: {
@@ -51,8 +53,11 @@ export default {
     ActiveFormPallet() {
       this.showFormPallet = !this.showFormPallet;
     },
-    ReciveDataFormChild: function (params) {
-      this.limit = params;
+    ReciveDataFormChild1: function (params) {
+      this.limitData = params;
+    },
+    ReciveDataFormChild2: function (params) {
+      this.limitEuroPallet = params;
     },
   },
 };
