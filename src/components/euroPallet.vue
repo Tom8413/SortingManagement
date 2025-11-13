@@ -3,6 +3,10 @@
     <div class="block" v-for="(data, index) in AllData" :key="index">
       <div>ID Worker : {{ data.ID_Worker }}</div>
       <div>keyPallet : {{ data.keyPallet }}</div>
+      <div>Quantity : {{ data.Quantity }}</div>
+      <div>Nestet : {{ data.Nestet }}</div>
+      <div>Department : {{ data.Department }}</div>
+      <div>Location : {{ data.Location }}</div>
       <button @click="deleteData(data, data._id)">Delete</button>
     </div>
   </div>
@@ -49,6 +53,11 @@ export default {
       console.log(this.reciveData);
       return this.reciveData.slice(0, this.limit);
     },
+    },
+    updated() {
+      if (this.reciveData.length === 8) {
+        this.$emit("EmitDataLimit", true)
+      }
   },
 
   };
