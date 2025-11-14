@@ -1,22 +1,17 @@
-const Vue = require('vue');
-const Router = require('vue-router');
-const EmployeeData = require('../components/employeeData');
+import {createRouter, createWebHistory} from 'vue-router'
 
 
-Vue.use(Router);
-
-export default new Router ({
-    routers: [
+const routers = [
      {
-         path: '/show-employee',
-         name: 'employeeData',
-         component: EmployeeData
+         path: '/dataBase',
+         name: 'dataBase',
+         component: DataBase
      },
-     {
-         path: '/create-employee',
-         name: 'create-employee',
-         component: AddEmployeeData
-     }
-
   ]
- })
+  
+  const router = createRouter({
+    history: createWebHistory(process.env.BASE_URL),
+    routers
+  })
+
+  export default router
