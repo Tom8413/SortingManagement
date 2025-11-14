@@ -1,7 +1,7 @@
 <template>
   <h1>Sorting Management App</h1>
 <div id="nav">
-  <router-link to="/dataBase">Data base Employee</router-link>
+  <router-link to="/database">Data base Employee</router-link>
 </div>
 <router-view />
 
