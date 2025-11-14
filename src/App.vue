@@ -1,5 +1,9 @@
 <template>
   <h1>Sorting Management App</h1>
+<div id="nav">
+  <router-link to="/dataBase">Data base Employee</router-link>
+</div>
+<router-view />
 
   <div v-if="showFormEmployee">
     <AddEmployeeData
@@ -71,5 +75,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+#nav {
+  padding: 30px;
 }
 </style>
