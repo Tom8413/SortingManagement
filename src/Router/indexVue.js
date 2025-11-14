@@ -1,17 +1,18 @@
 import {createRouter, createWebHistory} from 'vue-router'
+import dataBaseEmployee from '../components/dataBaseEmployee.vue'
 
 
-const routers = [
+const routes = [
      {
-         path: '/dataBase',
-         name: 'dataBase',
-         component: DataBase
+         path: "/database",
+         name: "database",
+         component: dataBaseEmployee
      },
   ]
   
   const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
-    routers
+    routes,
   })
 
-  export default router
+  export default router;
