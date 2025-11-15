@@ -51,12 +51,12 @@
 
 <script>
 import axios from "axios";
-import App from "../App.vue"
+import HomePage from "./HomePage.vue"
 
 export default {
   props: ['limitEuroPallet'],
   name: "AddEuroPallet",
-  components: {App},
+  components: {HomePage},
 
   data() {
     return {
