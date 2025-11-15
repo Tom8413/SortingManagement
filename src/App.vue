@@ -1,9 +1,10 @@
 <template>
   <h1>Sorting Management App</h1>
 <div id="nav">
-  <router-link to="/database">Data base Employee</router-link>
+  <router-link :to="{name: 'database'}">Data base Employee</router-link>
 </div>
-<router-view />
+
+ <router-view />
 
   <div v-if="showFormEmployee">
     <AddEmployeeData
@@ -28,7 +29,6 @@
 
 <euroPallet @EmitDataLimit="ReciveDataFormChild2" />  
 
- 
 </template>
 
 <script>
