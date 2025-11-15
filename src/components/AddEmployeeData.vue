@@ -42,12 +42,12 @@
 
 <script>
 import axios from "axios";
-import App from "../App.vue"
+import HomePage from "./HomePage.vue"
 
 export default {
   props: ['limitData'],
   name: "addEmployeeData",
-  components: { App },
+  components: { HomePage },
   
   
 
