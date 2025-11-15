@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from 'vue-router'
 import dataBaseEmployee from '../components/dataBaseEmployee.vue'
+import HomePage from '../components/HomePage.vue'
 
 
 const routes = [
@@ -7,6 +8,12 @@ const routes = [
          path: "/database",
          name: "database",
          component: dataBaseEmployee
+     },
+     {
+        path: "/homepage",
+        name: "homepage",
+        component: HomePage
+
      },
   ]
   
