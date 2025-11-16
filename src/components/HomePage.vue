@@ -27,10 +27,10 @@
 
 <script>
 
-import AddEmployeeData from "../components/AddEmployeeData.vue";
-import employeeData from "../components/employeeData.vue";
-import AddEuroPallet from "../components/AddEuroPallet.vue";
-import euroPallet from "../components/euroPallet.vue";
+import AddEmployeeData from "./AddEmployeeData.vue";
+import employeeData from "./employeeData.vue";
+import AddEuroPallet from "./AddEuroPallet.vue";
+import euroPallet from "./euroPallet.vue";
 
 export default {
   name: "HomePage",
