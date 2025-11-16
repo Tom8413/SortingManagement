@@ -3,11 +3,10 @@
  <div v-if="showFormEmployee">
     <AddEmployeeData
       @closeFormEmitEmployee="ActiveFormEmployee"
-      :limitData="limitData"
-    />
+      :limitData="limitData"/>
   </div>
   <label>
-    <button type="button" @click="ActiveFormEmployee">Add Employee</button>
+      <button type="button" @click="ActiveFormEmployee">Add Employee</button>
   </label>
   <employeeData @EmitDataLimit="ReciveDataFormChild1" />
 
