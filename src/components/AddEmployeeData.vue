@@ -47,7 +47,7 @@ import HomePage from "./HomePage.vue"
 export default {
   props: ['limitData'],
   name: "addEmployeeData",
-  components: { HomePage },
+  components: HomePage,
   
   
 
