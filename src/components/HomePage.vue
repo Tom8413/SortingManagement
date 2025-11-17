@@ -3,7 +3,7 @@
  <div v-if="showFormEmployee">
     <AddEmployeeData
       @closeFormEmitEmployee="ActiveFormEmployee"
-      :limitData="limitData"/>
+      :limitData="limitData" />
   </div>
   <label>
       <button type="button" @click="ActiveFormEmployee">Add Employee</button>
@@ -13,7 +13,7 @@
   <div v-if="showFormPallet">
     <AddEuroPallet 
     @closeFormEmitPallet="ActiveFormPallet" 
-    :limitEuroPallet="limitEuroPallet"/>
+    :limitEuroPallet="limitEuroPallet" />
   </div>
 
   <label>
