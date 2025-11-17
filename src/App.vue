@@ -2,12 +2,12 @@
 
   <h1>Sorting Management App</h1>
 <div id="nav">
-    <router-link :to="{name: 'homepage'}">Home Page |</router-link>
-  <router-link :to="{name: 'database'}"> Data base Employee</router-link>
+    <RouterLink :to="{name: 'homepage'}">Home Page |</RouterLink>
+  <RouterLink :to="{name: 'database'}"> Data base Employee</RouterLink>
 
 </div>
 
- <router-view />
+ <RouterView />
 
 </template>
 
