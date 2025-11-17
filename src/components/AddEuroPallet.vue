@@ -56,7 +56,7 @@ import HomePage from "./HomePage.vue"
 export default {
   props: ['limitEuroPallet'],
   name: "AddEuroPallet",
-  components: {HomePage},
+  components: HomePage,
 
   data() {
     return {
