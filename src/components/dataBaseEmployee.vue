@@ -1,6 +1,6 @@
 <template>
   <div v-if="showFormEmployee">
-    <AddEmployeeData
+    <AddEmployeeData2
       @closeFormEmitEmployee="ActiveFormEmployee"
     />
   </div>
@@ -34,11 +34,11 @@
 
 <script>
 import axios from "axios";
-import AddEmployeeData from "./AddEmployeeData.vue";
+import AddEmployeeData2 from "./AddEmployeeData2.vue";
 
 export default {
   name: "dataBaseEmployee",
-  components: { AddEmployeeData },
+  components: { AddEmployeeData2 },
 
   data() {
     return {
@@ -62,7 +62,7 @@ export default {
       this.showFormEmployee = !this.showFormEmployee;
     },
     SendDataToDepartment(index) {
-      this.$emit("EmitDataEmployee", reciveData[index]._id);
+      this.$emit("EmitDataEmployee", this.reciveData[index]._id);
     },
   },
   created() {
