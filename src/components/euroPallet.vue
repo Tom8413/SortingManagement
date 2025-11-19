@@ -30,7 +30,7 @@ export default {
       axios
         .delete("http://localhost:3000/delete-EuroPallet/" + _id)
         .then((response) => {
-          return console.log(response);
+          //return console.log(response);
         })
         .catch((error) => console.log(error));
 
@@ -42,7 +42,7 @@ export default {
       .get("http://localhost:3000/show-EuroPallet")
       .then((response) => {
         this.reciveData = response.data;
-        console.log(response);
+        //console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -50,7 +50,6 @@ export default {
   },
     computed: {
     AllData() {
-      console.log(this.reciveData);
       return this.reciveData.slice(0, this.limit);
     },
     },

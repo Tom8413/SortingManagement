@@ -1,5 +1,5 @@
  <template>
-
+<div>{{dataEmployeeChild}}</div>
  <div v-if="showFormEmployee">
     <AddEmployeeData
       @closeFormEmitEmployee="ActiveFormEmployee"
@@ -41,6 +41,7 @@ export default {
       showFormPallet: false,
       limitData: false,
       limitEuroPallet: false,
+      dataEmployeeChild: "",
     };
   },
   methods: {
@@ -55,6 +56,9 @@ export default {
     },
     ReciveDataFormChild2: function (params) {
       this.limitEuroPallet = params;
+    },
+    ReciveDataEmployee: function (params) {
+      this.dataEmployeeChild = params;
     },
   },
 };
