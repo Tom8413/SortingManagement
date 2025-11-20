@@ -48,7 +48,7 @@
       //window.location.reload();
     },
     SendDataToDepartment(index) {
-      this.$emit("EmitDataEmployee", this.reciveData[index]._id);
+      this.$emit("EmitDataEmployee", this.reciveData[index]._id); //emit data to dataBaseEmployee
     },
   },
     created() {
