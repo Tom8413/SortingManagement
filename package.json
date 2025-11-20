@@ -21,6 +21,7 @@
     "hostname-patcher": "^1.2.0",
     "lodash": "^4.17.21",
     "mongoose": "^8.18.0",
+    "pinia": "^3.0.4",
     "vue": "^3.2.13",
     "vue-router": "^4.6.3",
     "vuetify": "^3.0.0"
